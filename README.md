@@ -7,3 +7,13 @@
   <li>Heloiza - Codar/Limite</li>
   <li>Rafael - Codar/Tester</li>
 </ul>
+
+
+#Funcionalidades
+<ul>
+  <li>Saque</li>
+  <li>Depósito</li>
+  
+  
+#### Gustavo - Helo - Gabriel - Rafael
+</ul>
