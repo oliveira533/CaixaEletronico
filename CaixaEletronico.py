@@ -117,6 +117,8 @@ while nFuncao != 0:
         nSaqueCinco = 0
         nSaqueDois = 0
 
+    # pensado pelo grupo 
+    # feito pelo Gustavo
     elif nFuncao == 2:
         nDepositoAux = int(input("Informe a quantidade que você quer depositar: "))
         nAux = input("informe a conta na qual você fará o deposito: ")
@@ -127,6 +129,8 @@ while nFuncao != 0:
         print("Você depositou", nDepositoAux, "reias na conta", nAux)
 
     elif nFuncao == 3:
+        # pensado pelo Gustavo
+        # feito pelo Gustavo 
         sLogin = input("Informe o o login: ")
         sSenha = input("Informe a senha: ")
 
@@ -134,6 +138,7 @@ while nFuncao != 0:
             nFunc2 = int(input("\nDigite 0 para sair \nDigite 1 para  receber as informações gerais \nDigite 2 para repor cédulas \nDigite para retirar envelopes de depósito \n"))
             while nFunc2 != 0:
                 if nFunc2 == 1:
+                    # pensado pelo Gustavo
                     print("Infos gerais")
                     print("Ainda tem", nQuantidadeCedulas, "notas no caixa, sendo elas:")
                     print(nDuzentos, "notas de duznetos reais;")
@@ -156,6 +161,8 @@ while nFuncao != 0:
                     print("\nForam realizados", nAbestecimento, "reabastecimentos")
                     print("\nFOram realizados", nRetirada, "retiradas de depósitos")
                 elif nFunc2 == 2:
+
+                    # pensado pelo grupo
                     print("Repondo cédulas")
                     print("Informe quanto de cada cédula foi reposto")
                     nAux200 = int(input("200: "))
@@ -179,6 +186,8 @@ while nFuncao != 0:
 
                         nQuantidadeCedulas = (nDuzentos + nCem + nCinquenta + nVinte + nDez + nCinco + nDois)
                 elif nFunc2 == 3:
+
+                    # pensado pelo grupo
                     print("Retirando os depósitos feitos")
                     nRetirada += 1
                     print("A quantia que será retirada é " , nTotalDeposito)
