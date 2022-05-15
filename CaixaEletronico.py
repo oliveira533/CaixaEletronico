@@ -59,43 +59,43 @@ while nFuncao != 0:
             nSaqueDuzentos += 1
             nSaque = nSaque - 200
             nQuantidadeCedulas = nQuantidadeCedulas - 200
-            nDuzentos = nDuzentos - 200
+            nDuzentos -=1
 
         while nSaque >= 100:
             nSaqueCem += 1
             nSaque = nSaque - 100
             nQuantidadeCedulas = nQuantidadeCedulas - 100
-            nCem = nCem - 100
+            nCem -=1
 
         while nSaque >= 50:
             nSaqueCinquenta += 1
             nSaque = nSaque - 50
-            nQuantidadeCedulas = nQuantidadeCedulas - 50
-            nCinquenta = nCinquenta - 50
+            nQuantidadeCedulas -=1
+            nCinquenta -=1
 
         while nSaque >= 20:
             nSaqueVinte += 1
             nSaque = nSaque - 20
-            nQuantidadeCedulas = nQuantidadeCedulas - 20
-            nVinte =nVinte - 20
+            nQuantidadeCedulas -=1
+            nVinte -=1
 
         while nSaque >= 10:
             nSaqueDez += 1
             nSaque = nSaque - 10
-            nQuantidadeCedulas = nQuantidadeCedulas - 10
-            nDez = nDez - 10
+            nQuantidadeCedulas -=1
+            nDez -=1
 
         while nSaque >= 5:
             nSaqueCinco += 1
             nSaque = nSaque - 5
-            nQuantidadeCedulas = nQuantidadeCedulas - 5
-            nCinco = nCinco - 5
+            nQuantidadeCedulas -=1
+            nCinco -=1
 
         while nSaque >= 2:
             nSaqueDois += 1
             nSaque = nSaque - 2
-            nQuantidadeCedulas = nQuantidadeCedulas - 2
-            nDois = nDois - 2
+            nQuantidadeCedulas -=1
+            nDois -=1
 
         if nSaque == 1:
             print("Não conseguiremos entregar o valor pedido, por isso receberá o valor aproximado")
@@ -108,17 +108,33 @@ while nFuncao != 0:
         '\nNotas de cinco a receber:', nSaqueCinco, 
         '\nNotas de dois a receber', nSaqueDois, "\n")
 
+        nSaque = 0
+        nSaqueDuzentos = 0
+        nSaqueCem = 0
+        nSaqueCinquenta = 0
+        nSaqueVinte = 0
+        nSaqueDez = 0
+        nSaqueCinco = 0
+        nSaqueDois = 0
+
     elif nFuncao == 2:
-        nDeposito = int(input("Informe a quantidade que você quer depositar: "))
+        nDepositoAux = int(input("Informe a quantidade que você quer depositar: "))
+        nAux = input("informe a conta na qual você fará o deposito: ")
+
+        nDeposito+=1
+        nTotalDeposito += nDepositoAux
+
+        print("Você depositou", nDepositoAux, "reias na conta", nAux)
+
     elif nFuncao == 3:
         sLogin = input("Informe o o login: ")
         sSenha = input("Informe a senha: ")
 
         if sLogin == sLoginPadrao and sSenha == sSenhaPadrao:
-            nFunc2 = int(input(" Digite \0 para sair nDigite 1 para  receber as informações gerias \nDigite 2 para repor cédulas \nDigite para retirar envelopes de depósito \n"))
+            nFunc2 = int(input("\nDigite 0 para sair \nDigite 1 para  receber as informações gerias \nDigite 2 para repor cédulas \nDigite para retirar envelopes de depósito \n"))
             while nFunc2 != 0:
                 if nFunc2 == 1:
-                    print("Infos gerais\n")
+                    print("Infos gerais")
                     print("Ainda tem", nQuantidadeCedulas, "notas no caixa, sendo elas:")
                     print(nDuzentos, "notas de duznetos reais;")
                     print(nCem, "notas de cem reais")
@@ -127,7 +143,7 @@ while nFuncao != 0:
                     print(nDez, "notas de dez reais")
                     print(nCinco, "notas de cinco reais")
                     print(nDois, "notas de dois reais")
-                    print("\n Foram retidados", (7000 - nQuantidadeCedulas), "notas sendo a seguinte quantidade de notas para cada valor")
+                    print("\nForam retidados", (7000 - nQuantidadeCedulas), "notas sendo a seguinte quantidade de notas para cada valor")
                     print((1000 - nDuzentos), "notas de duznetos reais;")
                     print((1000 - nCem), "notas de cem reais")
                     print((1000 - nCinquenta), "notas de Cinquenta reais")
@@ -164,6 +180,10 @@ while nFuncao != 0:
                         nQuantidadeCedulas = (nDuzentos + nCem + nCinquenta + nVinte + nDez + nCinco + nDois)
                 elif nFunc2 == 3:
                     print("Retirando os depósitos feitos")
+                    nRetirada += 1
+                    print("A quantia que será retirada é " , nTotalDeposito)
+
+                nFunc2 = int(input("\nDigite 0 para sair \nDigite 1 para receber as informações gerias \nDigite 2 para repor cédulas \nDigite para retirar envelopes de depósito \n"))
     else:
         print("Escolha uma função:")
-    nFuncao = int(input("Digite 0 para sair \nDigite 1 para  sacar \nDigite 2 para depositar \nDigite 3 para fazer login como administrador: \n"))
+    nFuncao = int(input("Digite 0 para sair \nDigite 1 para sacar \nDigite 2 para depositar \nDigite 3 para fazer login como administrador: \n"))
