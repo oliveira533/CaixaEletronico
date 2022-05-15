@@ -74,3 +74,8 @@ if nFuncao == 1:
 
 elif nFuncao == 2:
     nDeposito = int(input("Informe a quantidade que você quer depositar: "))
+elif nFuncao == 3:
+    sLogin = input("Informe o o login: ")
+    sSenha = input("Informe a senha: ")
+else:
+    print("Escolha uma função:")
