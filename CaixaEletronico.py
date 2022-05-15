@@ -131,7 +131,7 @@ while nFuncao != 0:
         sSenha = input("Informe a senha: ")
 
         if sLogin == sLoginPadrao and sSenha == sSenhaPadrao:
-            nFunc2 = int(input("\nDigite 0 para sair \nDigite 1 para  receber as informações gerias \nDigite 2 para repor cédulas \nDigite para retirar envelopes de depósito \n"))
+            nFunc2 = int(input("\nDigite 0 para sair \nDigite 1 para  receber as informações gerais \nDigite 2 para repor cédulas \nDigite para retirar envelopes de depósito \n"))
             while nFunc2 != 0:
                 if nFunc2 == 1:
                     print("Infos gerais")
@@ -183,7 +183,7 @@ while nFuncao != 0:
                     nRetirada += 1
                     print("A quantia que será retirada é " , nTotalDeposito)
 
-                nFunc2 = int(input("\nDigite 0 para sair \nDigite 1 para receber as informações gerias \nDigite 2 para repor cédulas \nDigite para retirar envelopes de depósito \n"))
+                nFunc2 = int(input("\nDigite 0 para sair \nDigite 1 para receber as informações gerais \nDigite 2 para repor cédulas \nDigite para retirar envelopes de depósito \n"))
     else:
         print("Escolha uma função:")
     nFuncao = int(input("Digite 0 para sair \nDigite 1 para sacar \nDigite 2 para depositar \nDigite 3 para fazer login como administrador: \n"))
