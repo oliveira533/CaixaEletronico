@@ -19,11 +19,20 @@ nSaqueDez = 0
 nSaqueCinco = 0
 nSaqueDois = 0
 
-# variável que contém a quantidade de dinheiro que foi depositado 
+# variável que contém a quantidade de depósitos feitos
 # feito pelo Gustavo
 nDeposito = 0
 
-# variável que contém a quantidade de vezes que foi retirado os depósitos feitos 
+# variável que contém a quantidade total de dinheiro depositado
+# feito pelo Gustavo
+nTotalDeposito  = 0
+
+# vairável que contém a senha de administrador padrão
+#feito pelo Gustavo
+sLoginPadrao = 'Admin'
+sSenhaPadrao = '0000'
+
+# variável que contém a quantidade de vezes que foram retirados os depósitos feitos 
 # feito pelo Gustavo
 nRetirada = 0
 
@@ -45,7 +54,7 @@ while nFuncao != 0:
 
         # bloco de código que oferece q meno quantidade de notas possível
         # feito em conjunto pelo grupo
-        nSaque = int(input("Informe o valor que você quer sacar: "))
+        nSaque = int(input("\nInforme o valor que você quer sacar: "))
         while nSaque >= 200:
             nSaqueDuzentos += 1
             nSaque = nSaque - 200
@@ -89,7 +98,7 @@ while nFuncao != 0:
             nDois = nDois - 2
 
         if nSaque == 1:
-            print("\nNão conseguiremos entregar o valor pedido, por isso receberá o valor aproximado")
+            print("Não conseguiremos entregar o valor pedido, por isso receberá o valor aproximado")
         
         print('\nNotas de duzentos a receber:', nSaqueDuzentos, 
         '\nNotas de cem a receber:', nSaqueCem, 
@@ -104,6 +113,32 @@ while nFuncao != 0:
     elif nFuncao == 3:
         sLogin = input("Informe o o login: ")
         sSenha = input("Informe a senha: ")
+
+        if sLogin == sLoginPadrao and sSenha == sSenhaPadrao:
+            nFunc2 = int(input(" Digite \0 para sair nDigite 1 para  receber as informações gerias \nDigite 2 para repor cédulas \nDigite para retirar envelopes de depósito \n"))
+            while nFunc2 != 0:
+                if nFunc2 == 1:
+                    print("Infos gerais\n")
+                    print("Ainda tem", nQuantidadeCedulas, "notas no caixa, sendo elas:")
+                    print(nDuzentos, "notas de duznetos reais;")
+                    print(nCem, "notas de cem reais")
+                    print(nCinquenta, "notas de Cinquenta reais")
+                    print(nVinte, "notas de vinte reais")
+                    print(nDez, "notas de dez reais")
+                    print(nCinco, "notas de cinco reais")
+                    print(nDois, "notas de dois reais")
+                    print("\n Foram retidados", (7000 - nQuantidadeCedulas), "notas sendo a seguinte quantidade de notas para cada valor")
+                    print((1000 - nDuzentos), "notas de duznetos reais;")
+                    print((1000 - nCem), "notas de cem reais")
+                    print((1000 - nCinquenta), "notas de Cinquenta reais")
+                    print((1000 - nVinte), "notas de vinte reais")
+                    print((1000 - nDez), "notas de dez reais")
+                    print((1000 - nCinco), "notas de cinco reais")
+                    print((1000 - nDois), "notas de dois reais")
+                    print("Totalizando", ((1000 - nDuzentos) * 200) + ((1000 - nCem) * 100) + (1000 - nCinquenta) + ((1000 - nVinte) * 20) + ((1000 - nDez) * 10) + ((1000 - nCinco) * 5) + ((1000 - nDois) * 2))
+                    print("\nForam relizados", nDeposito, "depoistosm totalizando", nTotalDeposito)
+                    print("\nForam realizados", nAbestecimento, "reabastecimentos")
+                    print("\nFOram realizados", nRetirada, "retiradas de depósitos")
     else:
         print("Escolha uma função:")
-    nFuncao = int(input("Digite 1 para  sacar \nDigite 2 para depositar \nDigite 3 para fazer login como administrador: \n"))
+    nFuncao = int(input("Digite 0 para sair \nDigite 1 para  sacar \nDigite 2 para depositar \nDigite 3 para fazer login como administrador: \n"))
