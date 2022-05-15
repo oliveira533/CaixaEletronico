@@ -162,6 +162,8 @@ while nFuncao != 0:
                         nDois += nAux2
 
                         nQuantidadeCedulas = (nDuzentos + nCem + nCinquenta + nVinte + nDez + nCinco + nDois)
+                elif nFunc2 == 3:
+                    print("Retirando os depósitos feitos")
     else:
         print("Escolha uma função:")
     nFuncao = int(input("Digite 0 para sair \nDigite 1 para  sacar \nDigite 2 para depositar \nDigite 3 para fazer login como administrador: \n"))
