@@ -139,6 +139,29 @@ while nFuncao != 0:
                     print("\nForam relizados", nDeposito, "depoistosm totalizando", nTotalDeposito)
                     print("\nForam realizados", nAbestecimento, "reabastecimentos")
                     print("\nFOram realizados", nRetirada, "retiradas de depósitos")
+                elif nFunc2 == 2:
+                    print("Repondo cédulas")
+                    print("Informe quanto de cada cédula foi reposto")
+                    nAux200 = int(input("200: "))
+                    nAux100 = int(input("100: "))
+                    nAux50 = int(input("50: "))
+                    nAux20 = int(input("20: "))
+                    nAux10 = int(input("10: "))
+                    nAux5 = int(input("5: "))
+                    nAux2 = int(input("2: "))
+
+                    if (nAux200 + nDuzentos) > 1000 and (nAux100 + nCem) > 1000 and (nAux50 + nCinquenta) > 1000 and (nAux20 + nVinte) > 1000 and (nAux10 + nDez) > 1000 and (nAux5 + nCinco) > 1000 and (nAux2 + nDois) > 1000:
+                        print("Não é possível repor essa quantidade de cédulas")
+                    else:
+                        nDuzentos += nAux200
+                        nCem += nAux100
+                        nCinquenta += nAux50
+                        nVinte += nAux20
+                        nDez += nAux10
+                        nCinco += nAux5
+                        nDois += nAux2
+
+                        nQuantidadeCedulas = (nDuzentos + nCem + nCinquenta + nVinte + nDez + nCinco + nDois)
     else:
         print("Escolha uma função:")
     nFuncao = int(input("Digite 0 para sair \nDigite 1 para  sacar \nDigite 2 para depositar \nDigite 3 para fazer login como administrador: \n"))
