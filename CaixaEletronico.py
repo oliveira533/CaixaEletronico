@@ -46,7 +46,7 @@ nFuncao = int(input("\nDigite 0 para sair \nDigite 1 para sacar \nDigite 2 para 
 
 # laço de repetição para saber quantas vezes vai ser sacado dinheiro
 # feito pelo gustavo
-while nFuncao != 0:
+while True:
 
     # teste para saber o que vai ser feito no caixa
     # feito pelo Gustavo
@@ -136,7 +136,7 @@ while nFuncao != 0:
 
         if sLogin == sLoginPadrao and sSenha == sSenhaPadrao:
             nFunc2 = int(input("\nDigite 0 para sair \nDigite 1 para receber as informações gerais \nDigite 2 para repor cédulas \nDigite 3 para retirar envelopes de depósito \n"))
-            while nFunc2 != 0:
+            while True:
                 if nFunc2 == 1:
                     # pensado pelo Gustavo
                     print("Infos gerais")
@@ -192,8 +192,9 @@ while nFuncao != 0:
                     print("Retirando os depósitos feitos")
                     nRetirada += 1
                     print("A quantia que será retirada é " , nTotalDeposito)
-
+                elif nFunc2 == 0:
+                    break
                 nFunc2 = int(input("\nDigite 0 para sair \nDigite 1 para receber as informações gerais \nDigite 2 para repor cédulas \nDigite para retirar envelopes de depósito \n"))
-    else:
-        print("Escolha uma função:")
+    elif nFuncao == 0:
+        break
     nFuncao = int(input("\nDigite 0 para sair \nDigite 1 para sacar \nDigite 2 para depositar \nDigite 3 para fazer login como administrador: \n"))
