@@ -1,5 +1,6 @@
 # variaveis que contém as quantidades de cada cedulas
 # feito em conjunto com todo o grupo
+# Heloiza, Gustavo, Gabriel David e Rafael
 nQuantidadeCedulas = 7000
 nDuzentos = 1000
 nCem = 1000
